@@ -14,11 +14,11 @@ public class Progression extends Thread {
     public void run(){
         double result =0;
         long count =0;
-        while(!controller.getCanStop()){
+        while(!controller.getCanStop(number-1)){
             result+=step;
             count++;
         }
-        System.out.printf("Thread with number %d nd step %f executed with result %f and count of additions" +
+        System.out.printf("Thread with number %d and step %f executed with result %f and count of additions" +
                 "%d%n",number,step,result,count);
 
     }
